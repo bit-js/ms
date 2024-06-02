@@ -1,0 +1,16 @@
+{
+  "name": "bench",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/ms": "^0.7.34"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@lukeed/ms": "^2.0.2",
+    "ms": "^2.1.3"
+  }
+}
