@@ -58,8 +58,6 @@ export function toMs(str: `${number}` | `${number}${Unit}` | `${number} ${Unit}`
       : +parts[1] * 1000;
 }
 
-console.log(toMs('.5ms'));
-
 export function formatMs(value: number): string {
   const absValue = Math.abs(value);
 
