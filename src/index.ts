@@ -77,6 +77,24 @@ export function formatMs(value: number): string {
           : Math.round(value / 86400000) + 'd';
 }
 
+export function formatMsShort(value: number): string {
+  const absValue = Math.abs(value);
+
+  return absValue < 1000
+
+    ? value + ' ms'
+    : absValue < 60000
+
+      ? Math.round(value / 1000) + ' sec'
+      : absValue < 3600000
+
+        ? Math.round(value / 60000) + ' min'
+        : absValue < 86400000
+
+          ? Math.round(value / 3600000) + (absValue < 5400000 ? ' hr' : ' hrs')
+          : Math.round(value / 86400000) + (absValue < 129600000 ? ' day' : ' days');
+}
+
 export function formatMsLong(value: number): string {
   const absValue = Math.abs(value);
 
@@ -84,10 +102,13 @@ export function formatMsLong(value: number): string {
 
     ? value + ' ms'
     : absValue < 60000
+
       ? Math.round(value / 1000) + (absValue < 1500 ? ' second' : ' seconds')
       : absValue < 3600000
+
         ? Math.round(value / 60000) + (absValue < 90000 ? ' minute' : ' minutes')
         : absValue < 86400000
+
           ? Math.round(value / 3600000) + (absValue < 5400000 ? ' hour' : ' hours')
           : Math.round(value / 86400000) + (absValue < 129600000 ? ' day' : ' days');
 }

@@ -1,6 +1,6 @@
 {
   "name": "@bit-js/ms",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Optimized ms parser and serializer",
   "author": "aquapi",
   "license": "MIT",
